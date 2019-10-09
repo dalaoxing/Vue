@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import '@/mock/list';
+import '@/mock/index';
 import Item from '@/components/item';
 export default {
   name: 'classify',

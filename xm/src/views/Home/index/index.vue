@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import '@/mock/banner.js';
+import '@/mock/index';
 import Swiper from 'swiper';
 export default {
   name: 'index',
