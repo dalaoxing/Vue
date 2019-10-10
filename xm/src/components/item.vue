@@ -1,6 +1,6 @@
 <!--  -->
 <template>
-    <div class="item">
+    <div class="item" @click="toXq">
         <dl>
             <dt>
                 <img :src="item.coverUrl" alt="">
@@ -8,6 +8,7 @@
             <dd>
                 <h4>{{item.bookName}}</h4>
                 <slot name="list"></slot>
+                <slot name="jump"></slot>
             </dd>
         </dl>
     </div>
@@ -26,6 +27,16 @@ export default {
         return {
 
         };
+    },
+    methods:{
+        toXq(){
+            this.$router.push({
+                path:'/details',
+                query:{
+                    item:this.item
+                }
+            })
+        }
     }
 }
 
